@@ -95,3 +95,7 @@ body {
 img {
   display: initial !important;
 }
+.bg-left-corn {
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48dGl0bGU+Q29tYmluZWQgU2hhcGU8L3RpdGxlPjxwYXRoIGZpbGw9IiNERURFRTMiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTUgMHEwIDkuMDI1LTUgMTNzNy4yMzIuMDIyIDExLjM4Mi0zLjU2NFExNS41MzIgNS44NSA1IDAiLz48L3N2Zz4=)
+    no-repeat 0;
+}

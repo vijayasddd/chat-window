@@ -188,7 +188,7 @@ export default function ChatWindow() {
           {/* Chat area */}
           <div className="flex-1 text-sm p-3 overflow-x-hidden overflow-y-auto bg-gray-50">
             <div
-              className="mb-4 text-gray-400 cursor-pointer hover:bg-gray-100 p-2 rounded-lg"
+              className="mb-4 text-[#666666] cursor-pointer hover:bg-gray-100 p-2 rounded-lg"
               onClick={handleSystemMessageEdit}
             >
               <div className="mb-2">{systemMessage.timestamp}</div>
@@ -232,13 +232,13 @@ export default function ChatWindow() {
                     <div className="relative">
                       <img
                         src={
-                          message.isUser ? "/corn_right.png" : "/corn_left.png"
+                          message.isUser ? "/corn_right.svg" : "/corn_left.svg"
                         }
                         alt="left corn"
                         className={
                           message.isUser
-                            ? "absolute bottom-0  right-0 w-10 translate-x-[54%] translate-y-[25%]"
-                            : "absolute bottom-0  left-0 w-10 translate-x-[-54%] translate-y-[30%]"
+                            ? "absolute bottom-0  right-0 w-6 translate-x-[30%] translate-y-[-3%]"
+                            : "absolute bottom-0  left-0 w-6 translate-x-[-30%] translate-y-[-3%]"
                         }
                       />
                       <div
@@ -247,12 +247,11 @@ export default function ChatWindow() {
                         }
                         className={`p-3 rounded-2xl relative  max-w-xs break-all cursor-pointer ${
                           message.isUser
-                            ? "bg-blue-500 text-white "
-                            : "bg-[#dfdee3]  text-gray-800 "
+                            ? "bg-[#0071e3] text-[#fff] "
+                            : "bg-[#dedee3]  text-[#494949] "
                         }`}
                       >
                         {message.text}
-                        {/* 气泡拖尾 */}
                       </div>
                     </div>
                   )}
@@ -265,11 +264,14 @@ export default function ChatWindow() {
           <div className="bg-gray-100 p-3 flex items-center justify-between border-t">
             <button className="text-gray-500">
               <span className=" bg-gray-400  text-white rounded-full w-6 h-6 flex items-center justify-center">
-                <Plus className="h-4 w-4"></Plus>
+                <Plus className="h-4 w-4 text-white"></Plus>
               </span>
             </button>
             <div className="flex-1 mx-2">
-              <div className="h-8 bg-white rounded-full flex items-center justify-end px-3 shadow-[0_0_3px_4px_rgba(191,219,254,0.5)]">
+              <div className="h-8 bg-white relative rounded-full flex items-center justify-end px-3 shadow-[0_0_3px_4px_rgba(191,219,254,0.5)]">
+                <div className="absolute top-[50%] left-2  translate-y-[-50%]  text-[#a3a2a2]">
+                  发送消息
+                </div>
                 <span className="bg-gray-300 text-white text-sm border-0 rounded-full w-6 h-6 flex items-center justify-center">
                   ↑
                 </span>
