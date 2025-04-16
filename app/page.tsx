@@ -171,11 +171,7 @@ export default function ChatWindow() {
           </div>
           {/* Header */}
           <div className="bg-gray-100 p-3 flex items-center justify-center relative border-b">
-            <img
-              src="../public/image.png"
-              alt="Apple"
-              className="h-6 w-6 mb-12"
-            />
+            <img src="/image.png" alt="Apple" className="h-6 w-6 mb-12" />
             <div className="absolute  absolute-center flex items-center">
               <span className="h-2 w-2 bg-green-500 rounded-full mr-1"></span>
               <span className="text-xs  text-gray-600">
@@ -190,7 +186,7 @@ export default function ChatWindow() {
           </div>
 
           {/* Chat area */}
-          <div className="flex-1 text-sm p-3 overflow-y-auto bg-gray-50">
+          <div className="flex-1 text-sm p-3 overflow-x-hidden overflow-y-auto bg-gray-50">
             <div
               className="mb-4 text-gray-400 cursor-pointer hover:bg-gray-100 p-2 rounded-lg"
               onClick={handleSystemMessageEdit}
@@ -233,17 +229,31 @@ export default function ChatWindow() {
                       </div>
                     </div>
                   ) : (
-                    <div
-                      onClick={() =>
-                        handleBubbleClick(message.id, message.text)
-                      }
-                      className={`p-3 rounded-lg max-w-xs break-all cursor-pointer ${
-                        message.isUser
-                          ? "bg-blue-500 text-white rounded-tr-none"
-                          : "bg-gray-200 text-gray-800 rounded-tl-none"
-                      }`}
-                    >
-                      {message.text}
+                    <div className="relative">
+                      <img
+                        src={
+                          message.isUser ? "/corn_right.png" : "/corn_left.png"
+                        }
+                        alt="left corn"
+                        className={
+                          message.isUser
+                            ? "absolute bottom-0  right-0 w-10 translate-x-[54%] translate-y-[25%]"
+                            : "absolute bottom-0  left-0 w-10 translate-x-[-54%] translate-y-[30%]"
+                        }
+                      />
+                      <div
+                        onClick={() =>
+                          handleBubbleClick(message.id, message.text)
+                        }
+                        className={`p-3 rounded-2xl relative  max-w-xs break-all cursor-pointer ${
+                          message.isUser
+                            ? "bg-blue-500 text-white "
+                            : "bg-[#dfdee3]  text-gray-800 "
+                        }`}
+                      >
+                        {message.text}
+                        {/* 气泡拖尾 */}
+                      </div>
                     </div>
                   )}
                 </div>

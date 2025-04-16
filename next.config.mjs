@@ -13,9 +13,9 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  assetPrefix: ".",
-  trailingSlash: true,
+  // output: "export",
+  // assetPrefix: ".",
+  // trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
