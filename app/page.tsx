@@ -3,17 +3,7 @@
 import type React from "react";
 
 import html2canvas from "html2canvas";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Download,
-  Minus,
-  Plus,
-  RotateCw,
-  Shield,
-  Square,
-  X,
-} from "lucide-react";
+import { Download, Minus, Plus, Shield, Square, X } from "lucide-react";
 import { useRef, useState } from "react";
 
 export default function ChatWindow() {
@@ -181,7 +171,11 @@ export default function ChatWindow() {
           </div>
           {/* Header */}
           <div className="bg-gray-100 p-3 flex items-center justify-center relative border-b">
-            <img src="/image.png" alt="Apple" className="h-6 w-6 mb-12" />
+            <img
+              src="../public/image.png"
+              alt="Apple"
+              className="h-6 w-6 mb-12"
+            />
             <div className="absolute  absolute-center flex items-center">
               <span className="h-2 w-2 bg-green-500 rounded-full mr-1"></span>
               <span className="text-xs  text-gray-600">
